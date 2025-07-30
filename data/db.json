@@ -1,0 +1,410 @@
+{
+  "추천 요아정 조합": [
+    {
+      "id": 1,
+      "name": "[요아정 시그니처] 벌집꿀+그래놀라",
+      "serve": [
+        {
+          "serve": 1,
+          "amount": 230,
+          "cal": 474,
+          "sugar": 62,
+          "protain": 5,
+          "fat": 4,
+          "sodium": 122
+        },
+        {
+          "serve": 2,
+          "amount": 380,
+          "cal": 657,
+          "sugar": 91,
+          "protain": 8,
+          "fat": 6,
+          "sodium": 194
+        },
+        {
+          "serve": 3,
+          "amount": 530,
+          "cal": 837,
+          "sugar": 117,
+          "protain": 16,
+          "fat": 8,
+          "sodium": 270
+        },
+        {
+          "serve": 4,
+          "amount": 680,
+          "cal": 1020,
+          "sugar": 150,
+          "protain": 20,
+          "fat": 11,
+          "sodium": 340
+        }
+      ],
+      "allergy": ["우유", "밀"]
+    },
+    {
+      "id": 2,
+      "name": "그릭통통 복숭아",
+      "serve": [
+        {
+          "serve": 1,
+          "amount": 390,
+          "cal": 361,
+          "sugar": 40,
+          "protain": 10,
+          "fat": 2,
+          "sodium": 79
+        }
+      ],
+      "allergy": ["우유"]
+    },
+    {
+      "id": 3,
+      "name": "[요아정 시그니처] 초코쉘+내마음대로",
+      "serve": [
+        {
+          "serve": 1,
+          "amount": 180,
+          "cal": 367,
+          "sugar": 40,
+          "protain": 5,
+          "fat": 16,
+          "sodium": 74
+        },
+        {
+          "serve": 2,
+          "amount": 350,
+          "cal": 672,
+          "sugar": 74,
+          "protain": 11,
+          "fat": 28,
+          "sodium": 147
+        },
+        {
+          "serve": 3,
+          "amount": 520,
+          "cal": 978,
+          "sugar": 109,
+          "protain": 16,
+          "fat": 36,
+          "sodium": 218
+        },
+        {
+          "serve": 4,
+          "amount": 670,
+          "cal": 1159,
+          "sugar": 141,
+          "protain": 20,
+          "fat": 40,
+          "sodium": 295
+        }
+      ],
+      "allergy": ["우유", "대두"]
+    }
+  ],
+  "내 마음대로 요아정": [
+    {
+      "menu": [
+        {
+          "id": 1,
+          "name": "요거트 아이스크림",
+          "data": [
+            {
+              "id": 1,
+              "amount": 150,
+              "cal": 183,
+              "sugar": 29,
+              "protain": 5,
+              "fat": 2,
+              "sodium": 74
+            },
+            {
+              "id": 2,
+              "amount": 300,
+              "cal": 366,
+              "sugar": 57,
+              "protain": 9,
+              "fat": 5,
+              "sodium": 147
+            },
+            {
+              "id": 3,
+              "amount": 450,
+              "cal": 549,
+              "sugar": 86,
+              "protain": 14,
+              "fat": 7,
+              "sodium": 221
+            },
+            {
+              "id": 4,
+              "amount": 600,
+              "cal": 732,
+              "sugar": 114,
+              "protain": 18,
+              "fat": 9,
+              "sodium": 294
+            }
+          ],
+          "allergy": ["우유"]
+        }
+      ],
+      "opt1": [
+        {
+          "id": 1,
+          "name": "초코쉘",
+          "data": [
+            {
+              "id": 1,
+              "amount": 30,
+              "cal": 187,
+              "sugar": 11,
+              "protain": 1,
+              "fat": 14,
+              "sodium": 0
+            },
+            {
+              "id": 2,
+              "amount": 50,
+              "cal": 312,
+              "sugar": 18,
+              "protain": 2,
+              "fat": 23,
+              "sodium": 0
+            },
+            {
+              "id": 3,
+              "amount": 70,
+              "cal": 436,
+              "sugar": 25,
+              "protain": 3,
+              "fat": 32,
+              "sodium": 0
+            }
+          ],
+          "allergy": ["우유", "대두"]
+        }
+      ]
+    }
+  ],
+  "추천 아사이볼 조합": [
+    {
+      "id": 1,
+      "name": "클래식",
+      "data": [
+        {
+          "id": "s",
+          "amount": 308,
+          "cal": 616,
+          "sugar": 46,
+          "protain": 12,
+          "fat": 13,
+          "sodium": 80
+        },
+        {
+          "id": "m",
+          "amount": 408,
+          "cal": 706,
+          "sugar": 65,
+          "protain": 12,
+          "fat": 13,
+          "sodium": 98
+        },
+        {
+          "id": "l",
+          "amount": 533,
+          "cal": 933,
+          "sugar": 91,
+          "protain": 16,
+          "fat": 19,
+          "sodium": 144
+        },
+        {
+          "id": "cupm",
+          "amount": 369,
+          "cal": 697,
+          "sugar": 63,
+          "protain": 11,
+          "fat": 16,
+          "sodium": 100
+        },
+        {
+          "id": "cupl",
+          "amount": 494,
+          "cal": 924,
+          "sugar": 84,
+          "protain": 15,
+          "fat": 22,
+          "sodium": 143
+        }
+      ],
+      "allergy": ["밀", "땅콩"]
+    }
+  ],
+  "내 마음대로 아사이볼": [
+    {
+      "menu": [
+        {
+          "id": 1,
+          "name": "아사이베리",
+          "size": [
+            {
+              "id": "s",
+              "amount": 150,
+              "cal": 135,
+              "sugar": 29,
+              "protain": 0,
+              "fat": 0,
+              "sodium": 30
+            },
+            {
+              "id": "m",
+              "amount": 408,
+              "cal": 706,
+              "sugar": 65,
+              "protain": 12,
+              "fat": 13,
+              "sodium": 98
+            },
+            {
+              "id": "l",
+              "amount": 533,
+              "cal": 933,
+              "sugar": 91,
+              "protain": 16,
+              "fat": 19,
+              "sodium": 144
+            }
+          ],
+          "allergy": []
+        }
+      ],
+      "opt1": [
+        {
+          "id": 1,
+          "name": "그래놀라 15g",
+          "amount": 15,
+          "cal": 64,
+          "sugar": 3,
+          "protain": 0,
+          "fat": 1,
+          "sodium": 22,
+          "allergy": ["밀"]
+        }
+      ]
+    }
+  ],
+  "내 마음대로 과일컵": [
+    {
+      "menu": [
+        {
+          "id": 1,
+          "size": [
+            {
+              "id": "S",
+              "amount": 0,
+              "cal": 0,
+              "sugar": 0,
+              "protain": 0,
+              "fat": 0,
+              "sodium": 0
+            },
+            {
+              "id": "M",
+              "amount": 0,
+              "cal": 0,
+              "sugar": 0,
+              "protain": 0,
+              "fat": 0,
+              "sodium": 0
+            },
+            {
+              "id": "과일도시락",
+              "amount": 0,
+              "cal": 0,
+              "sugar": 0,
+              "protain": 0,
+              "fat": 0,
+              "sodium": 0
+            }
+          ],
+          "allergy": []
+        }
+      ],
+      "opt1": [
+        {
+          "id": 1,
+          "name": "파인애플 100g",
+          "amount": 100,
+          "cal": 48,
+          "sugar": 9,
+          "protain": 1,
+          "fat": 0,
+          "sodium": 1,
+          "allergy": []
+        }
+      ]
+    }
+  ],
+  "내 마음대로 싱글컵": [
+    {
+      "menu": [
+        {
+          "id": 1,
+          "name": "피치 시그니처의 정석컵",
+          "amout": 260,
+          "cal": 343,
+          "sugar": 53,
+          "protain": 4,
+          "fat": 2.6,
+          "sodium": 71,
+          "allergy": ["우유", "밀"]
+        }
+      ],
+      "opt1": [
+        {
+          "id": 1,
+          "name": "요거트 아이스크림",
+          "amount": 120,
+          "cal": 144,
+          "sugar": 27,
+          "protain": 3,
+          "fat": 2,
+          "sodium": 47,
+          "allergy": ["우유"]
+        }
+      ]
+    }
+  ],
+  "카페 & 베이커리": [
+    {
+      "cafe": [
+        {
+          "id": 1,
+          "name": "딸기라떼",
+          "amout": 490,
+          "cal": 116,
+          "sugar": 8,
+          "protain": 3,
+          "fat": 2,
+          "sodium": 54,
+          "allergy": ["우유"]
+        }
+      ],
+      "bakery": [
+        {
+          "id": 1,
+          "name": "플레인 휘낭시에",
+          "amout": 55,
+          "cal": 257,
+          "sugar": 8,
+          "protain": 5,
+          "fat": 8.4,
+          "sodium": 64,
+          "allergy": ["밀", "우유", "계란", "대두"]
+        }
+      ]
+    }
+  ]
+}
