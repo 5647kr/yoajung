@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "[요아정 시그니처] 벌집꿀+그래놀라",
-      "serve": [
+      "data": [
         {
           "serve": 1,
           "amount": 230,
@@ -41,12 +41,12 @@
           "sodium": 340
         }
       ],
-      "allergy": ["우유", "밀"]
+      "allergy": "우유, 밀"
     },
     {
       "id": 2,
       "name": "그릭통통 복숭아",
-      "serve": [
+      "data": [
         {
           "serve": 1,
           "amount": 390,
@@ -57,12 +57,12 @@
           "sodium": 79
         }
       ],
-      "allergy": ["우유"]
+      "allergy": "우유"
     },
     {
       "id": 3,
       "name": "[요아정 시그니처] 초코쉘+내마음대로",
-      "serve": [
+      "data": [
         {
           "serve": 1,
           "amount": 180,
@@ -100,7 +100,7 @@
           "sodium": 295
         }
       ],
-      "allergy": ["우유", "대두"]
+      "allergy": "우유, 대두"
     }
   ],
   "내 마음대로 요아정": [
@@ -147,7 +147,7 @@
               "sodium": 294
             }
           ],
-          "allergy": ["우유"]
+          "allergy": "우유"
         }
       ],
       "opt1": [
@@ -183,7 +183,7 @@
               "sodium": 0
             }
           ],
-          "allergy": ["우유", "대두"]
+          "allergy": "우유, 대두"
         }
       ]
     }
@@ -239,7 +239,7 @@
           "sodium": 143
         }
       ],
-      "allergy": ["밀", "땅콩"]
+      "allergy": "밀, 땅콩"
     }
   ],
   "내 마음대로 아사이볼": [
@@ -248,7 +248,7 @@
         {
           "id": 1,
           "name": "아사이베리",
-          "size": [
+          "data": [
             {
               "id": "s",
               "amount": 150,
@@ -277,7 +277,7 @@
               "sodium": 144
             }
           ],
-          "allergy": []
+          "allergy": ""
         }
       ],
       "opt1": [
@@ -290,7 +290,7 @@
           "protain": 0,
           "fat": 1,
           "sodium": 22,
-          "allergy": ["밀"]
+          "allergy": "밀"
         }
       ]
     }
@@ -300,9 +300,9 @@
       "menu": [
         {
           "id": 1,
-          "size": [
+          "data": [
             {
-              "id": "S",
+              "id": "s",
               "amount": 0,
               "cal": 0,
               "sugar": 0,
@@ -311,7 +311,7 @@
               "sodium": 0
             },
             {
-              "id": "M",
+              "id": "m",
               "amount": 0,
               "cal": 0,
               "sugar": 0,
@@ -329,7 +329,7 @@
               "sodium": 0
             }
           ],
-          "allergy": []
+          "allergy": ""
         }
       ],
       "opt1": [
@@ -342,7 +342,7 @@
           "protain": 1,
           "fat": 0,
           "sodium": 1,
-          "allergy": []
+          "allergy": ""
         }
       ]
     }
@@ -359,7 +359,7 @@
           "protain": 4,
           "fat": 2.6,
           "sodium": 71,
-          "allergy": ["우유", "밀"]
+          "allergy": "우유, 밀"
         }
       ],
       "opt1": [
@@ -372,7 +372,7 @@
           "protain": 3,
           "fat": 2,
           "sodium": 47,
-          "allergy": ["우유"]
+          "allergy": "우유"
         }
       ]
     }
@@ -389,7 +389,7 @@
           "protain": 3,
           "fat": 2,
           "sodium": 54,
-          "allergy": ["우유"]
+          "allergy": "우유"
         }
       ],
       "bakery": [
@@ -402,7 +402,7 @@
           "protain": 5,
           "fat": 8.4,
           "sodium": 64,
-          "allergy": ["밀", "우유", "계란", "대두"]
+          "allergy": "밀, 우유, 계란, 대두"
         }
       ]
     }
