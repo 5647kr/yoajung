@@ -1,4 +1,133 @@
 {
+  "gnu": [
+    {
+      "id": 1,
+      "text": "브랜드",
+      "url": "/brand"
+    },
+    {
+      "id": 2,
+      "text": "메뉴&매장",
+      "url": "/menustore"
+    },
+    {
+      "id": 3,
+      "text": "창업",
+      "url": "/franchise"
+    },
+    {
+      "id": 4,
+      "text": "맴버십",
+      "url": "/membership"
+    },
+    {
+      "id": 5,
+      "text": "커뮤니티",
+      "url": "/community"
+    }
+  ],
+  "footer": {
+    "company": "요아정",
+    "ceo": "박현희",
+    "number": "696-86-02195",
+    "address": "서울특별시 성동구 아차산로17길 48 1703-5호",
+    "partnership": "yoajung@yoajung.co.kr",
+    "cs": "cs@yoajung.co.kr",
+    "phone": "1551-8106"
+  },
+  "main": [
+    {
+      "id": "1",
+      "title": "EAT FRESH, EAT HEALTHY",
+      "content": "언제 어디서나 내마음대로, 프리미엄 디저트 브랜드 '요아정'",
+      "img": "url",
+      "section": "hero"
+    },
+    {
+      "id": "2",
+      "title": "요거트 아이스크림 | 그릭 요거트",
+      "content": "그레놀라+벌집꿀",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "3",
+      "title": "요거트 아이스크림",
+      "content": "바나나+초코링+아몬드",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "4",
+      "title": "요거트 아이스크림",
+      "content": "딸기+초코쉘+치즈큐브",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "5",
+      "title": "요거트 아이스크림",
+      "content": "(벌집꿀)달콤모닝의 정석",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "6",
+      "title": "그릭 요거트",
+      "content": "그릭통통 복숭아",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "7",
+      "title": "그릭 요거트",
+      "content": "블루베리+그래놀라+벌집꿀",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "8",
+      "title": "그릭 요거트",
+      "content": "딸기+그래놀라",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "9",
+      "title": "그릭 요거트",
+      "content": "딸기+블루베리+벌집꿀",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "10",
+      "title": "그릭 요거트",
+      "content": "그릭 요거트",
+      "img": "url",
+      "section": "menu"
+    },
+    {
+      "id": "11",
+      "title": "GLOBAL YOAJUNG",
+      "content": "요아정은 하와이 최대 쇼핑몰 알라모아나를 시작으로 해외 진출의 첫 발을 내디뎠습니다.",
+      "img": "url",
+      "section": "interview"
+    },
+    {
+      "id": "12",
+      "title": "GLOBAL YOAJUNG",
+      "content": "현재 미국, 홍콩, 중국, 일본, 호주, 싱가포르 해외 6개국으로 사업을 확장하며 글로벌 디저트 브랜드로 성장하고 있습니다.",
+      "img": "url",
+      "section": "interview"
+    },
+    {
+      "id": "13",
+      "title": "GLOBAL YOAJUNG",
+      "content": "요아정은 글로벌 전문 인력을 통해 해외 프랜차이즈 확장 및 현지화를 성공적으로 이끌며 전세계인의 사랑을 받고 있습니다.",
+      "img": "url",
+      "section": "interview"
+    }
+  ],
   "menus": [
     {
       "id": 1,
@@ -448,7 +577,7 @@
       "name": "플레인 휘낭시에",
       "nutrients": [
         {
-          "amout": 55,
+          "amount": 55,
           "cal": 257,
           "sugar": 8,
           "protain": 5,
@@ -460,6 +589,197 @@
     }
   ],
   "options": [
-    
+    {
+      "id": 1,
+      "category": 2.1,
+      "name": "초코쉘",
+      "nutrients": [
+        {
+          "amount": 30,
+          "cal": 187,
+          "sugar": 11,
+          "protain": 1,
+          "fat": 14,
+          "sodium": 0
+        },
+        {
+          "amount": 50,
+          "cal": 312,
+          "sugar": 18,
+          "protain": 2,
+          "fat": 23,
+          "sodium": 0
+        },
+        {
+          "amount": 70,
+          "cal": 436,
+          "sugar": 25,
+          "protain": 3,
+          "fat": 32,
+          "sodium": 0
+        }
+      ],
+      "allergy": ["우유", "밀"]
+    },
+    {
+      "id": 6,
+      "category": 2.2,
+      "name": "벌집꿀 50g",
+      "nutrients": [
+        {
+          "amount": -20,
+          "cal": -270,
+          "sugar": 2,
+          "protain": -3,
+          "fat": -32,
+          "sodium": 3
+        }
+      ],
+      "allergy": []
+    },
+    {
+      "id": 10,
+      "category": 2.3,
+      "name": "연유 30g",
+      "nutrients": [
+        {
+          "amount": -40,
+          "cal": -335,
+          "sugar": -8,
+          "protain": -2,
+          "fat": -31,
+          "sodium": 24
+        }
+      ],
+      "allergy": ["우유", "대두"]
+    },
+    {
+      "id": 100,
+      "category": 4.1,
+      "name": "그래놀라 15g",
+      "nutrients": [
+        {
+          "amount": -350,
+          "cal": -64,
+          "sugar": -3,
+          "protain": 0,
+          "fat": 1,
+          "sodium": 22
+        }
+      ],
+      "allergy": ["밀"]
+    },
+    {
+      "id": 150,
+      "category": 4.2,
+      "name": "바나나 1/2개",
+      "nutrients": [
+        {
+          "amount": 0,
+          "cal": 39,
+          "sugar": 5,
+          "protain": 0,
+          "fat": 0,
+          "sodium": 0
+        }
+      ],
+      "allergy": []
+    },
+    {
+      "id": 200,
+      "category": 5.1,
+      "name": "파인애플 100g",
+      "nutrients": [
+        {
+          "amount": 100,
+          "cal": 48,
+          "sugar": 9,
+          "protain": 1,
+          "fat": 0,
+          "sodium": 1
+        }
+      ],
+      "allergy": []
+    },
+    {
+      "id": 201,
+      "category": 5.1,
+      "name": "바나나 100g",
+      "nutrients": [
+        {
+          "amount": 100,
+          "cal": 88,
+          "sugar": 12,
+          "protain": 1,
+          "fat": 0,
+          "sodium": 1
+        }
+      ],
+      "allergy": []
+    },
+    {
+      "id": 202,
+      "category": 5.1,
+      "name": "골든키위 1개(83g)",
+      "nutrients": [
+        {
+          "amount": 83,
+          "cal": 44,
+          "sugar": 8,
+          "protain": 1,
+          "fat": 0,
+          "sodium": 1
+        }
+      ],
+      "allergy": []
+    },
+    {
+      "id": 300,
+      "category": 6.1,
+      "name": "초코쉘 15g",
+      "nutrients": [
+        {
+          "amount": 15,
+          "cal": 78,
+          "sugar": 5,
+          "protain": 1,
+          "fat": 7,
+          "sodium": 0
+        }
+      ],
+      "allergy": ["우유", "대두"]
+    },
+    {
+      "id": 301,
+      "category": 6.1,
+      "name": "체리쉘 15g",
+      "nutrients": [
+        {
+          "amount": 15,
+          "cal": 106,
+          "sugar": 5,
+          "protain": 0,
+          "fat": 8,
+          "sodium": 0
+        }
+      ],
+      "allergy": ["우유", "대두"]
+    },
+    {
+      "id": 302,
+      "category": 6.1,
+      "name": "망고쉘 15g",
+      "nutrients": [
+        {
+          "amount": 15,
+          "cal": 42,
+          "sugar": 10,
+          "protain": 0,
+          "fat": 0,
+          "sodium": 0
+        }
+      ],
+      "allergy": ["우유", "대두"]
+    }
   ]
 }
