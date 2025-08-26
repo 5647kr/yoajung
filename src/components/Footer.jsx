@@ -63,7 +63,7 @@ export default Footer;
 const FooterWrap = styled.footer`
   width: 100%;
   height: 30rem;
-  padding: 3rem 6rem;
+  padding: 3rem 10rem;
   background-color: #f63f5d;
 `;
 
@@ -78,6 +78,7 @@ const ImgWrap = styled.div`
 const ContentWrap = styled.div`
   padding-top: 4rem;
   color: var(--white-color);
+  font-size: 1.2rem;
   & ul {
     display: flex;
   }

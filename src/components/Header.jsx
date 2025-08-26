@@ -18,11 +18,11 @@ const Header = memo(() => {
 
   return (
     <HeaderWrap>
-      <div>
+      <LogoWrap>
         <a href="/">
           <img src="/assets/img/yoajungLogo.png" alt="요아정 로고" />
         </a>
-      </div>
+      </LogoWrap>
       <MenuList>
         <ul>
           {Array.isArray(data) &&
@@ -46,17 +46,20 @@ const HeaderWrap = styled.header`
   padding-block: 0.7rem;
   display: flex;
   position: relative;
-  & div {
-    margin-left: 5%;
-  }
-  & div img {
-    width: 5rem;
-    aspect-ratio: 1 / 1;
-  }
 `;
 
+const LogoWrap = styled.div`
+  width: 5%;
+  margin-left: 5%;
+  img {
+    width: 100%;
+    vertical-align: top;
+    aspect-ratio: 1 / 1;
+  }
+`
+
 const MenuList = styled.div`
-  width: 35%;
+  width: 50%;
   position: absolute;
   left: 35%;
   bottom: 24%;
