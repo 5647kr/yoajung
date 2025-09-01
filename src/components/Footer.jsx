@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFooter } from "../slices/FooterSlice";
 import styled from "styled-components";
 
+import yoajungLogo2 from "../assets/img/yoajungLogo2.png";
+
 const Footer = memo(() => {
   const { status, data, loading } = useSelector((state) => state.FooterSlice);
 
@@ -15,7 +17,7 @@ const Footer = memo(() => {
   return (
     <FooterWrap>
       <ImgWrap>
-        <img src="/assets/img/yoajungLogo2.png" alt="요아정 푸터 로고" />
+        <img src={yoajungLogo2} alt="요아정 푸터 로고" />
       </ImgWrap>
       <ContentWrap>
         <ul>

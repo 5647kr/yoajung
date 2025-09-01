@@ -16,6 +16,17 @@ const GlobalStyle = createGlobalStyle`
     font-size: 10px;
   }
 
+  main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+  }
+
+  main > section {
+    grid-column: 3 / 11;
+    width: 100%;
+  }
+
   * {
     box-sizing: border-box;
   }

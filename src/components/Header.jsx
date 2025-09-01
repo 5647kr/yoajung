@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getMenu } from "../slices/MenuSlice";
 import MenuLink from "./MenuLink";
 
+import yoajungLogo from "../assets/img/yoajungLogo.png";
+
 const Header = memo(() => {
   // 리덕스 스토어에서 상태 변수 꺼내기
   const { status, data, loading } = useSelector((state) => state.MenuSlice);
@@ -20,7 +22,7 @@ const Header = memo(() => {
     <HeaderWrap>
       <LogoWrap>
         <a href="/">
-          <img src="/assets/img/yoajungLogo.png" alt="요아정 로고" />
+          <img src={yoajungLogo} alt="요아정 로고" />
         </a>
       </LogoWrap>
       <MenuList>
@@ -56,7 +58,7 @@ const LogoWrap = styled.div`
     vertical-align: top;
     aspect-ratio: 1 / 1;
   }
-`
+`;
 
 const MenuList = styled.div`
   width: 50%;

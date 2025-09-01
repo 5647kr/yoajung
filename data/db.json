@@ -40,7 +40,7 @@
       "id": "1",
       "title": "EAT FRESH, EAT HEALTHY",
       "content": "언제 어디서나 내마음대로, 프리미엄 디저트 브랜드 '요아정'",
-      "img": "url",
+      "img": "http://localhost:3001/img/a.png",
       "section": "hero"
     },
     {

@@ -10,14 +10,16 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/brand" element={<MainPage />} />
-        <Route path="/menustore" element={<MainPage />} />
-        <Route path="/franchise" element={<MainPage />} />
-        <Route path="/membership" element={<MainPage />} />
-        <Route path="/community" element={<MainPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/brand" element={<MainPage />} />
+          <Route path="/menustore" element={<MainPage />} />
+          <Route path="/franchise" element={<MainPage />} />
+          <Route path="/membership" element={<MainPage />} />
+          <Route path="/community" element={<MainPage />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );
