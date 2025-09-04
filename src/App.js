@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import GlobalStyle from "./styles/GlobalStyle";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
+import CommunityPage from "./pages/CommunityPage";
+
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
           <Route path="/menustore" element={<MainPage />} />
           <Route path="/franchise" element={<MainPage />} />
           <Route path="/membership" element={<MainPage />} />
-          <Route path="/community" element={<MainPage />} />
+          <Route path="/community" element={<CommunityPage />} />
         </Routes>
       </main>
       <Footer />
