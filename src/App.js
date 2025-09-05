@@ -5,6 +5,8 @@ import GlobalStyle from "./styles/GlobalStyle";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import CommunityPage from "./pages/CommunityPage";
+import MemberShipPage from "./pages/MemberShipPage";
+
 
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
           <Route path="/brand" element={<MainPage />} />
           <Route path="/menustore" element={<MainPage />} />
           <Route path="/franchise" element={<MainPage />} />
-          <Route path="/membership" element={<MainPage />} />
+          <Route path="/membership" element={<MemberShipPage />} />
           <Route path="/community" element={<CommunityPage />} />
         </Routes>
       </main>

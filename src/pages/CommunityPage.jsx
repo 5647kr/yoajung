@@ -194,7 +194,7 @@ const BtnWrap = styled.section`
     justify-content: center;
   }
   li {
-    width: 10%;
+    width: 20%;
   }
   li ~ li {
     border-left: 1px solid #ddd;
@@ -225,6 +225,10 @@ const ContentWrap = styled.section`
     display: inline-block;
     margin-right: 1vw;
     background: url(${logo}) no-repeat center / contain;
+  }
+  img {
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
   }
 `;
 

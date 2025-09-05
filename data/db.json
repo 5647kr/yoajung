@@ -863,25 +863,25 @@
     {
       "id": "event1",
       "title": "이벤트 제목1",
-      "img": "http://localhost:3001/img/interview3.jpg",
+      "img": "http://localhost:3001/img/event1.png",
       "content": "이벤트 내용1"
     },
     {
       "id": "event2",
       "title": "이벤트 제목2",
-      "img": "http://localhost:3001/img/interview3.jpg",
+      "img": "http://localhost:3001/img/event2.png",
       "content": "이벤트 내용2"
     },
     {
       "id": "event3",
       "title": "이벤트 제목3",
-      "img": "http://localhost:3001/img/interview3.jpg",
+      "img": "http://localhost:3001/img/event3.png",
       "content": "이벤트 내용3"
     },
     {
       "id": "event4",
       "title": "이벤트 제목4",
-      "img": "http://localhost:3001/img/interview3.jpg",
+      "img": "http://localhost:3001/img/event4.png",
       "content": "이벤트 내용4"
     }
   ]

@@ -22,7 +22,6 @@ const MainPage = memo(() => {
     dispatch(mainDb());
   }, []);
 
-  console.log(data);
   return (
     <>
       <HeroSection>
