@@ -12,6 +12,16 @@ import logo from "../assets/img/logo.png";
 import member1 from "../assets/img/memberImg1.png";
 import member2 from "../assets/img/memberImg2.png";
 import member3 from "../assets/img/memberImg3.png";
+import level1 from "../assets/img/level1.png";
+import level2 from "../assets/img/level2.png";
+import level3 from "../assets/img/level3.png";
+import level4 from "../assets/img/level4.png";
+import orderTitle1 from "../assets/img/orderTitle1.png";
+import orderTitle2 from "../assets/img/orderTitle2.png";
+import orderPhone from "../assets/img/orderPhone.png";
+import list1 from "../assets/img/list1.png";
+import list2 from "../assets/img/list2.png";
+import list3 from "../assets/img/list3.png";
 
 const MemberShipPage = memo(() => {
   const [menuState, setMenuState] = useState("event");
@@ -91,45 +101,106 @@ const MemberShipPage = memo(() => {
         </h2>
         <p>요아정만의 멤버십 혜택</p>
         <MemberLevelWrap>
-          <MemberContentWrap>
-            <ul>
-              <li>
-                <h2>
-                  언제 어디서나 <br />
+          <CardList>
+            <li>
+              <img src={member1} alt="맴버십 이미지1" />
+              <div>
+                <h3>
+                  언제 어디서나
+                  <br />
                   편하게 주문
-                </h2>
+                </h3>
                 <p>
                   가벼운 매장과 메뉴 추천으로
                   <br />
                   빠르고 쉽게 주문 가능
                 </p>
-              </li>
-              <li>
-                <h2>
-                  언제 어디서나 <br />
-                  편하게 주문
-                </h2>
-                <p>
-                  가벼운 매장과 메뉴 추천으로
+              </div>
+            </li>
+            <li>
+              <img src={member2} alt="맴버십 이미지2" />
+              <div>
+                <h3>
+                  요아정 앱에서만!
                   <br />
-                  빠르고 쉽게 주문 가능
-                </p>
-              </li>
-              <li>
-                <h2>
-                  언제 어디서나 <br />
-                  편하게 주문
-                </h2>
+                  회원 전용 이벤트
+                </h3>
                 <p>
-                  가벼운 매장과 메뉴 추천으로
+                  프리퀀시 등 다양한 이벤트에
                   <br />
-                  빠르고 쉽게 주문 가능
+                  참여할 수 있습니다.
                 </p>
-              </li>
-            </ul>
-          </MemberContentWrap>
+              </div>
+            </li>
+            <li>
+              <img src={member3} alt="맴버십 이미지3" />
+              <div>
+                <h3>
+                  주문할 수록 커지는
+                  <br />
+                  멤버십 혜택!
+                </h3>
+                <p>
+                  4단계 등급별
+                  <br />
+                  쿠폰과 적립금 혜택을 누리세요.
+                </p>
+              </div>
+            </li>
+          </CardList>
+          <MemberLevelContent>
+            <div>
+              <h3>MEMBERSHIP LEVEL</h3>
+              <p>맴버십 단계</p>
+              <ul>
+                <li>
+                  <img src={level1} alt="level1" />
+                </li>
+                <li>
+                  <img src={level2} alt="level2" />
+                </li>
+                <li>
+                  <img src={level3} alt="level3" />
+                </li>
+                <li>
+                  <img src={level4} alt="level4" />
+                </li>
+              </ul>
+            </div>
+          </MemberLevelContent>
         </MemberLevelWrap>
       </MemberShipSection>
+      <MemberOrderSection>
+        <OrderTitle>
+          <img src={orderTitle1} alt="yoajung" />
+          <img src={orderTitle2} alt="order" />
+          <h3>요아정 오더로 더욱 간편하게!</h3>
+          <p>
+            기다리지 말고 요아정 앱 오더로
+            <br />
+            빠르고 쉽게 요아정을 만나보세요!
+          </p>
+          <ul>
+            <li>#간편주문</li>
+            <li>#빠른 결제</li>
+            <li>#바로포장</li>
+          </ul>
+        </OrderTitle>
+        <OrderList>
+          <img src={orderPhone} alt="폰 이미지" />
+          <ul>
+            <li>
+              <img src={list1} alt="" />
+            </li>
+            <li>
+              <img src={list2} alt="" />
+            </li>
+            <li>
+              <img src={list3} alt="" />
+            </li>
+          </ul>
+        </OrderList>
+      </MemberOrderSection>
     </>
   );
 });
@@ -147,7 +218,7 @@ const BtnWrap = styled.section`
     justify-content: center;
   }
   li {
-    width: 20%;
+    width: 10%;
   }
   li ~ li {
     border-left: 1px solid #ddd;
@@ -221,7 +292,7 @@ const ContentWrap = styled.div`
 
 const MemberShipSection = styled.section`
   grid-column: 1 / -1;
-  padding-block: 10rem;
+  padding-top: 10rem;
   text-align: center;
   position: relative;
   & > h2 {
@@ -245,41 +316,141 @@ const MemberShipSection = styled.section`
   }
 `;
 
-const MemberLevelWrap = styled(HeroSection)`
-  background-color: #fff5f5;
-  margin-top: 30rem;
+const MemberLevelWrap = styled.div`
+  box-shadow: inset 0 0 10px red;
+  margin-top: 20rem;
+  background-color: #fef2f0;
   position: relative;
 `;
 
-const MemberContentWrap = styled.div`
-  width: 100%;
+const CardList = styled.ul`
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
   position: absolute;
-  top: -50%;
-  transform: translateY(-10%);
-  ul {
-    width: 50%;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  li {
+    width: 100%;
+    position: relative;
+  }
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+  div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 3rem;
+    width: 100%;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+  p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+`;
+
+const MemberLevelContent = styled.div`
+  background-color: #fff4f4;
+  padding: 26rem 0 10rem;
+  & > div {
+    background-color: black;
+    width: 100rem;
+    border-radius: 5rem;
     margin: 0 auto;
+    padding: 6rem;
+  }
+  h3,
+  p {
+    color: white;
+  }
+  h3 {
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  p {
+    font-size: 1.6rem;
+    margin: 2rem 0 6rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 2rem;
+    margin-top: 8rem;
+    li {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+`;
+
+const MemberOrderSection = styled.section`
+  grid-column: 1 / -1;
+  background-color: #ffe6e9;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-block: 20rem 10rem;
+`;
+
+const OrderTitle = styled.div`
+  grid-column: 3 / 7;
+  img {
+    width: 45%;
+  }
+  h3 {
+    font-size: 3rem;
+    margin-top: 4rem;
+    font-weight: bolder;
+  }
+  p {
+    font-size: 1.6rem;
+    margin: 4rem 0 8rem;
+  }
+  ul {
     display: flex;
     gap: 2rem;
   }
   li {
-    width: 100%;
-    padding: 14rem 0 10rem;
-    background: url(${member1}) no-repeat center / contain;
-  }
-  li > h2, li > p {
-    color: black;
-  }
-
-  li > h2 {
-    font-size: 1.8rem;
-    padding-block: 2rem;
-  }
-  li > p {
-    font-size: 1.2rem;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1.4rem;
   }
 `;
 
-
+const OrderList = styled.div`
+  grid-column: 8 / -1;
+  margin-top: -10rem;
+  position: relative;
+  & > img {
+    width: 50%;
+  }
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translateY(-40%);
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+  }
+  li {
+    width: 100%;
+  }
+  li > img {
+    width: 100%;
+  }
+`;
 
 export default MemberShipPage;

@@ -27,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 
+  main > div {
+    grid-column: 1 / -1;
+  }
+
   * {
     box-sizing: border-box;
   }

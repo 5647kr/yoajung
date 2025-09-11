@@ -5,6 +5,7 @@ import logo from "../assets/img/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { faqList } from "../slices/FaqSlice";
 import { eventList } from "../slices/EventSlice";
+import { Link } from "react-router-dom";
 
 const CommunityPage = memo(() => {
   const [menuState, setMenuState] = useState("event");
@@ -97,26 +98,20 @@ const EventComponents = memo(({ data = [], loading = false }) => {
 
   const items = Array.isArray(data) ? data : [];
 
-  
-    // return (
-    //   <>
-    //     <h2>이벤트</h2>
-    //     <EventList>
-    //       <li>등록된 이벤트가 없습니다.</li>
-    //     </EventList>
-    //   </>
-    // );
-
   return (
     <>
       <h2>이벤트</h2>
       <EventList>
-        {items && items.length > 0 && items.map((item) => (
-          <li key={item.id}>
-            <img src={item.img} alt={item.title} />
-            <p>{item.title}</p>
-          </li>
-        ))}
+        {items &&
+          items.length > 0 &&
+          items.map((item) => (
+            <li key={item.id}>
+              <Link to={`/community/detail/${item.id}`}>
+                <img src={item.img} alt={item.title} />
+                <p>{item.title}</p>
+              </Link>
+            </li>
+          ))}
       </EventList>
     </>
   );
@@ -194,7 +189,7 @@ const BtnWrap = styled.section`
     justify-content: center;
   }
   li {
-    width: 20%;
+    width: 10%;
   }
   li ~ li {
     border-left: 1px solid #ddd;
