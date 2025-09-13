@@ -3,36 +3,34 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-
   :root {
-    --main-pink-color: #EB6CA1;
-    --main-blue-color: #0074BC;
-    --main-yellow-color: #FFE74D;
-    --black-color: #000;
+    --main-color: #ffbc0d;
+    --sub-color: #e18733;
+    --subBg-color: #dec8b4;
+    --black-color: #2d2d2d;
+    --shadow-color: #ebebeb;
+    --bg-color: #f7f7f7
+    --red-color: ##db0007;
     --white-color: #FFF;
   }
 
+
   html {
+    font-family: "Noto Sans KR";
     font-size: 10px;
   }
 
   main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-  }
-
-  main > section {
-    grid-column: 3 / 11;
-    width: 100%;
-  }
-
-  main > div {
-    grid-column: 1 / -1;
   }
 
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--black-color);
+    letter-spacing: -1.5px;
   }
 
   a {

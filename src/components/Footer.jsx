@@ -1,12 +1,13 @@
 import { memo, useEffect } from "react";
+import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { getFooter } from "../slices/FooterSlice";
-import styled from "styled-components";
-
-import yoajungLogo2 from "../assets/img/yoajungLogo2.png";
+import { Link } from "react-router-dom";
+import Icons from "../assets/icons/css_sprites.png";
+import { ArrowUp } from "lucide-react";
 
 const Footer = memo(() => {
-  const { status, data, loading } = useSelector((state) => state.FooterSlice);
+  const { data } = useSelector((state) => state.FooterSlice);
 
   const dispatch = useDispatch();
 
@@ -16,46 +17,36 @@ const Footer = memo(() => {
 
   return (
     <FooterWrap>
-      <ImgWrap>
-        <img src={yoajungLogo2} alt="요아정 푸터 로고" />
-      </ImgWrap>
-      <ContentWrap>
-        <ul>
-          <li>
-            <span>
-              <strong>대표자</strong>: {data?.ceo}
-            </span>
-          </li>
-          <li>
-            <span>
-              <strong>사업자번호</strong>: {data?.number}
-            </span>
-          </li>
-          <li>
-            <span>
-              <strong>주소</strong>: {data?.address}
-            </span>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <span>
-              <strong>제휴문의</strong>: {data?.partnership}
-            </span>
-          </li>
-          <li>
-            <span>
-              <strong>CS문의</strong>: {data?.cs}
-            </span>
-          </li>
-          <li>
-            <span>
-              <strong>대표전화</strong>: {data?.phone}
-            </span>
-          </li>
-        </ul>
-        <p>Copyright ⓒ 요거트아이스크림의정석. all Rights Reserved.</p>
-      </ContentWrap>
+      <div>
+        <FooterTitle>
+          <Link to={"#"} />
+          <button>
+            <ArrowUp color="#fff" strokeWidth={2} />
+          </button>
+        </FooterTitle>
+        <FooterNav>
+          <ul>
+            {data?.nav?.map((item) => (
+              <li key={item.id}>{item.title}</li>
+            ))}
+          </ul>
+        </FooterNav>
+        <FooterInfo>
+          <p>
+            [인증범위 : 대외서비스(홈페이지, 맥딜리버리, 채용, VOC, 쿠폰앱)
+            (심사받지 않은 물리적 인프라 영역 제외)]
+            <br />
+            [유효기간 : 2024. 08. 07. ~ 2027. 08. 06.]
+          </p>
+          <h2>
+            {data?.company} | 대표이사:{data?.ceo} | 사업자등록번호:
+            {data?.regNumber} | 전화주문: {data?.phone}
+          </h2>
+        </FooterInfo>
+        <FooterCopyRight>
+          <p>COPYRIGHT © 2019 ALL RIGHTS RESERVED BY McDonald's.</p>
+        </FooterCopyRight>
+      </div>
     </FooterWrap>
   );
 });
@@ -63,35 +54,67 @@ const Footer = memo(() => {
 export default Footer;
 
 const FooterWrap = styled.footer`
-  width: 100%;
-  height: 30rem;
-  padding: 3rem 10rem;
-  background-color: #f63f5d;
-`;
-
-const ImgWrap = styled.div`
-  padding-block: 2rem;
-  border-bottom: 1px solid var(--white-color);
-  & img {
-    width: 7rem;
+  background-color: var(--black-color);
+  & > div {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-inline: 4rem;
+    color: var(--white-color);
   }
-`;
+  & > div div {
+    padding-block: 2rem;
+    font-size: 1.6rem;
+  }
+  & > div div:not(:last-child) {
+    border-bottom: 1px solid #555;
+  }
+  `;
 
-const ContentWrap = styled.div`
-  padding-top: 4rem;
-  color: var(--white-color);
-  font-size: 1.2rem;
-  & ul {
+const FooterTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  & > a {
+    width: 40px;
+    height: 40px;
+    background: url(${Icons}) -730px -495px;
+  }
+  & > button {
+    background-color: transparent;
+    border: none;
+    padding-inline: 0.8rem;
+    cursor: pointer;
+  }
+  `;
+
+const FooterNav = styled.div`
+  & > ul {
     display: flex;
   }
-  & strong {
+  li {
+    width: 100%;
     font-weight: bold;
+    color: var(--white-color);
   }
-  & span {
-    margin-right: 1rem;
+  li:first-child {
+    color: var(--sub-color);
   }
-  & p {
-    margin-top: 1rem;
-    font-weight: bold;
+  `;
+
+const FooterInfo = styled.div`
+  p {
+    padding-left: 7.6rem;
+    color: var(--white-color);
   }
-`;
+  h2 {
+    padding-top: 2.4rem;
+    font-weight: 600;
+    color: var(--white-color);
+  }
+  `;
+
+const FooterCopyRight = styled.div`
+  p {
+    font-weight: 300;
+    color: var(--white-color);
+  }
+`

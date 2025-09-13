@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import MenuSlice from "./slices/MenuSlice";
+import HeaderSlice from "./slices/HeaderSlice";
 import FooterSlice from "./slices/FooterSlice";
 import MainSlice from "./slices/MainSlice";
 import FaqSlice from "./slices/FaqSlice";
@@ -7,7 +7,7 @@ import EventSlice from "./slices/EventSlice";
 
 const store = configureStore({
   reducer: {
-    MenuSlice,
+    HeaderSlice,
     FooterSlice,
     MainSlice,
     FaqSlice,

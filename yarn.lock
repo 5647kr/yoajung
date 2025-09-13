@@ -9091,6 +9091,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.544.0":
+  version: 0.544.0
+  resolution: "lucide-react@npm:0.544.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/2503f8cf65e62915997073b6053423bf8091b9470cb397560b417ef2f1628ea162c49e821b787cf153afb86828482d941f051c3f2aa642a1fa58c3de227e0113
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -14196,6 +14205,7 @@ __metadata:
     "@testing-library/react": "npm:^13.4.0"
     "@testing-library/user-event": "npm:^13.5.0"
     eslint-plugin-jsx-a11y: "npm:^6.2.3"
+    lucide-react: "npm:^0.544.0"
     react: "npm:^19.1.1"
     react-dom: "npm:^19.1.1"
     react-redux: "npm:^9.2.0"
