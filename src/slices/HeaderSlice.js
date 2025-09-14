@@ -3,7 +3,7 @@
  */
 import reduxHelper from "../helpers/ReduxHelper";
 
-const API_URL = "/gnu";
+const API_URL = "/header";
 
 // 컴포넌트에서 호출할 액션 함수
 export const getMenu = reduxHelper.get("HeaderSlice/getMenu", API_URL);

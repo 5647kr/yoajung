@@ -1,4 +1,4 @@
-import { memo, useEffect } from "react";
+import { memo, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,9 @@ import Icons from "../assets/icons/css_sprites.png";
 const Header = memo(() => {
   // 리덕스 스토어에서 상태 변수 꺼내기
   const { data } = useSelector((state) => state.HeaderSlice);
+  const [isHover, setIsHover] = useState(false);
+  const [menuClicked, setMenuClicked] = useState("");
+  const [subMenu, setSubMenu] = useState("");
 
   // 액션함수를 호출할 수 있는 함수
   const dispatch = useDispatch();
@@ -17,32 +20,60 @@ const Header = memo(() => {
     dispatch(getMenu());
   }, []);
 
-  console.log(data);
+  const handleMenu = (title) => {
+    setMenuClicked(title);
+  };
+
+  const resetMenu = () => {
+    setMenuClicked("");
+  };
+
+  const handleSubMenu = (id) => {
+    console.log(id);
+    setSubMenu(id);
+  };
 
   return (
     <>
       <HeaderWrap>
-        <Link to="/" />
+        <Link to="/" onClick={resetMenu} />
         <div>
-          <MenuWrap>
+          <MenuWrap $isHover={isHover}>
             <ul>
               {data?.map((menu) => (
-                <li key={menu.id}>
-                  <Link to={menu.url}>{menu.title}</Link>
-                  <SubMenu>
+                <MenuItem
+                  key={menu.id}
+                  onMouseEnter={() => setIsHover(true)}
+                  onMouseLeave={() => setIsHover(false)}
+                  $isActive={menuClicked === menu.title}
+                >
+                  <Link to={menu.url} onClick={(e) => handleMenu(menu.title)}>
+                    {menu.title}
+                  </Link>
+                  <SubMenu $isHover={isHover}>
                     {menu?.subMenu.map((sub) => (
-                      <li key={sub.id}>
-                        <Link to={sub.url}>{sub.subTitle}</Link>
-                      </li>
+                      <SubMenuItem key={sub.id} $isActive={subMenu === sub.id}>
+                        <Link
+                          to={sub.url}
+                          onClick={() => {
+                            handleMenu(menu.title);
+                            handleSubMenu(sub.id);
+                          }}
+                        >
+                          {sub.subTitle}
+                        </Link>
+                      </SubMenuItem>
                     ))}
                   </SubMenu>
-                </li>
+                </MenuItem>
               ))}
             </ul>
           </MenuWrap>
           <BtnWrap>
-            <Link to={"/store/rent"}>임차문의</Link>
-            <button>KR</button>
+            <Link to={"/store/rent"} onClick={resetMenu}>
+              임차문의
+            </Link>
+            <span>KR</span>
           </BtnWrap>
         </div>
       </HeaderWrap>
@@ -91,47 +122,53 @@ const MenuWrap = styled.nav`
       left: 0;
       top: 80px;
       background-color: #f6f6f6;
-      display: none; //none으로 수정
+      display: ${({ $isHover }) => ($isHover ? "block" : "none")};
     }
   }
-  & > ul:hover::before {
-    display: block;
+`;
+
+const MenuItem = styled.li`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    background-color: var(--main-color);
   }
-  & > ul > li {
-    position: relative;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
     width: 100%;
-    height: 100%;
+    height: 4px;
+    display: ${({ $isActive }) => ($isActive ? "block" : "none")};
+    background-color: var(--main-color);
   }
-  & > ul > li > a {
+  & > a {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.4rem;
     font-weight: 800;
-    position: relative;
-  }
-  & > ul > li:hover {
-    background-color: var(--main-color);
-  }
-  & > ul:hover ul {
-    display: block;
   }
 `;
 
 const SubMenu = styled.ul`
-  display: none; // none으로 수정
+  display: ${({ $isHover }) => ($isHover ? "block" : "none")};
   height: 560px;
   padding-top: 4rem;
-  & > li {
-    padding-block: 2rem;
-  }
-  & > li > a {
+`;
+
+const SubMenuItem = styled.li`
+  padding-block: 2rem;
+  & > a {
     font-size: 2rem;
     text-align: center;
     padding-bottom: 0.2rem;
+    font-weight: ${({ $isActive }) => ($isActive ? "700" : "500")};
   }
-  & > li:hover {
+  &:hover {
     text-decoration: underline;
   }
 `;
@@ -148,7 +185,7 @@ const BtnWrap = styled.div`
     background-color: var(--shadow-color);
     font-weight: 700;
   }
-  button {
+  span {
     font-size: 1.6rem;
     padding: 1rem;
     background-color: var(--main-color);

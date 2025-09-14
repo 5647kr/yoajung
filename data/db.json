@@ -1,5 +1,5 @@
 {
-  "gnu": [
+  "header": [
     {
       "id": 1,
       "title": "Menu",
@@ -18,9 +18,7 @@
       "id": 2,
       "title": "Store",
       "url": "/store",
-      "subMenu": [
-        { "id": "store1", "subTitle": "매장찾기", "url": "/store" }
-      ]
+      "subMenu": [{ "id": "store1", "subTitle": "매장찾기", "url": "/store" }]
     },
     {
       "id": 3,
@@ -62,9 +60,7 @@
           "id": "story5",
           "subTitle": "맥도날드의 사람들",
           "url": "/story/people"
-        },
-        { "id": "menu6", "subTitle": "해피밀", "url": "/menu/happy-meal" },
-        { "id": "menu7", "subTitle": "맥카페&음료", "url": "/menu/mc-cafe" }
+        }
       ]
     }
   ],
@@ -74,11 +70,46 @@
     "regNumber": "101-81-26409",
     "phone": "1600-5252",
     "nav": [
-      {"id": "footerNav1", "title": "개인정보 처리방침"},
-      {"id": "footerNav2", "title": "사이트맵"},
-      {"id": "footerNav3", "title": "임차문의"},
-      {"id": "footerNav4", "title": "고객문의"},
-      {"id": "footerNav5", "title": "인재채용"}
+      { "id": "footerNav1", "title": "개인정보 처리방침" },
+      { "id": "footerNav2", "title": "사이트맵" },
+      { "id": "footerNav3", "title": "임차문의" },
+      { "id": "footerNav4", "title": "고객문의" },
+      { "id": "footerNav5", "title": "인재채용" }
     ]
-  }
+  },
+  "menu": [
+    {
+      "id": "burger1",
+      "title": "창녕 갈릭 치킨 버거 세트",
+      "engTitle": "Changnyeong Garlic Beef Burger Meal",
+      "content": "100% 창녕 햇마늘에 순 쇠고기 패티 2장이 들어간 풍성한 맛의 조합!",
+      "cal": "942~1082",
+      "lunch": true,
+      "set": true,
+      "single": true,
+      "category": "burger"
+    },
+    {
+      "id": "burger2",
+      "title": "1955® 버거 세트",
+      "engTitle": "1955® Burger Meal",
+      "content": "113g 두툼한 순 쇠고기 패티, 특별한 1955 소스에 깊은 풍미의 그릴드 어니언까지! 맥도날드가 처음 생긴 1955년의 맛을 담은 영원한 오리지널 1955 버거",
+      "cal": "896~1035",
+      "lunch": true,
+      "set": true,
+      "single": true,
+      "category": "burger"
+    },
+    {
+      "id": "burger3",
+      "title": "더블 쿼터파운더® 치즈 세트",
+      "engTitle": "Double Quarter Pounder® with Cheese Meal",
+      "content": "좋아하는건 더 많이 즐기시라고, 두 배 이상 커진 1/4 파운드 비프 패티가 두 장 (226그램)! 육즙이 풍부한 고기 맛을 그대로 살린 100% 순 쇠고기 패티 두 장과 치즈 두 장이 입안 가득 완벽하게 조화되는 놀라운 맛",
+      "cal": "1094~1233",
+      "lunch": false,
+      "set": true,
+      "single": true,
+      "category": "burger"
+    }
+  ]
 }
