@@ -116,13 +116,14 @@ const MenuWrap = styled.nav`
     display: flex;
     &::before {
       content: "";
-      width: 100%;
+      width: 100vw;
       height: 560px;
       position: absolute;
       left: 0;
       top: 80px;
       background-color: #f6f6f6;
       display: ${({ $isHover }) => ($isHover ? "block" : "none")};
+      z-index: 5;
     }
   }
 `;
@@ -131,6 +132,7 @@ const MenuItem = styled.li`
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: 10;
   &:hover {
     background-color: var(--main-color);
   }
@@ -158,6 +160,7 @@ const SubMenu = styled.ul`
   display: ${({ $isHover }) => ($isHover ? "block" : "none")};
   height: 560px;
   padding-top: 4rem;
+  z-index: 20;
 `;
 
 const SubMenuItem = styled.li`

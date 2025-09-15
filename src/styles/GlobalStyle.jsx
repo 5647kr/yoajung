@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --subBg-color: #dec8b4;
     --black-color: #2d2d2d;
     --shadow-color: #ebebeb;
-    --bg-color: #f7f7f7
+    --bg-color: #f7f7f7;
     --red-color: ##db0007;
     --white-color: #FFF;
   }
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: var(--black-color);
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
   }
 
   a {
