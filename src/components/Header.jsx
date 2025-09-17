@@ -36,46 +36,51 @@ const Header = memo(() => {
   return (
     <>
       <HeaderWrap>
-        <Link to="/" onClick={resetMenu} />
-        <div>
-          <MenuWrap $isHover={isHover}>
-            <ul>
-              {data?.map((menu) => (
-                <MenuItem
-                  key={menu.id}
-                  onMouseEnter={() => setIsHover(true)}
-                  onMouseLeave={() => setIsHover(false)}
-                  $isActive={menuClicked === menu.title}
-                >
-                  <Link to={menu.url} onClick={(e) => handleMenu(menu.title)}>
-                    {menu.title}
-                  </Link>
-                  <SubMenu $isHover={isHover}>
-                    {menu?.subMenu.map((sub) => (
-                      <SubMenuItem key={sub.id} $isActive={subMenu === sub.id}>
-                        <Link
-                          to={sub.url}
-                          onClick={() => {
-                            handleMenu(menu.title);
-                            handleSubMenu(sub.id);
-                          }}
+        <HeaderContainer>
+          <Link to="/" onClick={resetMenu} />
+          <div>
+            <MenuWrap $isHover={isHover}>
+              <ul>
+                {data?.map((menu) => (
+                  <MenuItem
+                    key={menu.id}
+                    onMouseEnter={() => setIsHover(true)}
+                    onMouseLeave={() => setIsHover(false)}
+                    $isActive={menuClicked === menu.title}
+                  >
+                    <Link to={menu.url} onClick={(e) => handleMenu(menu.title)}>
+                      {menu.title}
+                    </Link>
+                    <SubMenu $isHover={isHover}>
+                      {menu?.subMenu.map((sub) => (
+                        <SubMenuItem
+                          key={sub.id}
+                          $isActive={subMenu === sub.id}
                         >
-                          {sub.subTitle}
-                        </Link>
-                      </SubMenuItem>
-                    ))}
-                  </SubMenu>
-                </MenuItem>
-              ))}
-            </ul>
-          </MenuWrap>
-          <BtnWrap>
-            <Link to={"/store/rent"} onClick={resetMenu}>
-              임차문의
-            </Link>
-            <span>KR</span>
-          </BtnWrap>
-        </div>
+                          <Link
+                            to={sub.url}
+                            onClick={() => {
+                              handleMenu(menu.title);
+                              handleSubMenu(sub.id);
+                            }}
+                          >
+                            {sub.subTitle}
+                          </Link>
+                        </SubMenuItem>
+                      ))}
+                    </SubMenu>
+                  </MenuItem>
+                ))}
+              </ul>
+            </MenuWrap>
+            <BtnWrap>
+              <Link to={"/store/rent"} onClick={resetMenu}>
+                임차문의
+              </Link>
+              <span>KR</span>
+            </BtnWrap>
+          </div>
+        </HeaderContainer>
       </HeaderWrap>
     </>
   );
@@ -84,13 +89,17 @@ const Header = memo(() => {
 export default Header;
 
 const HeaderWrap = styled.header`
+  box-shadow: 0 2px 4px var(--shadow-color);
+  `;
+
+const HeaderContainer = styled.div`
+  width: 100%;
   max-width: 1440px;
   height: 8rem;
-  margin: 0 auto;
-  padding-inline: 4rem;
   display: flex;
   align-items: center;
-  box-shadow: var(--shadow-color);
+  padding-inline: 4rem;
+  margin: 0 auto;
   & > a {
     width: 64px;
     height: 64px;

@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import GlobalStyle from "./styles/GlobalStyle";
 import { Routes, Route } from "react-router-dom";
 import NewsList from "./pages/newPage/NewsList";
+import NewsItem from "./pages/newPage/NewsItem";
+
 // import MainPage from "./pages/MainPage";
 // import CommunityPage from "./pages/CommunityPage";
 // import MemberShipPage from "./pages/MemberShipPage";
@@ -25,6 +27,7 @@ function App() {
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/community/detail/:id" element={<CommunityDetailPage />} /> */}
           <Route path="/news/list" element={<NewsList />} />
+          <Route path="news/list/:id" element={<NewsItem />} />
         </Routes>
       </main>
       <Footer />

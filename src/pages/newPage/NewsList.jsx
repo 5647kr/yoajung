@@ -36,7 +36,7 @@ const NewsList = memo(() => {
       </NewsInfo>
       <hr />
       <NewsListItem>
-        {data.map((item) => (
+        {data && data.length > 0 && data.map((item) => (
           <li key={item.id}>
             <Link to={`/news/list/${item.id}`}>
               <h3>{item.title}</h3>
